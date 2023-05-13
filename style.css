@@ -1,0 +1,64 @@
+:root {
+    --website-background: #1d1d1e;
+    --website-font: white;
+    --website-light-font: #49494a;
+    --main-content-background: #222223;
+    --main-content-link-background: rgba(255, 255, 255, 0.06);
+    --footer-link-color: #404041;
+    --input-background: #262627;
+}
+
+body {
+    background-color: var(--website-background);
+    color: var(--website-font);
+    font-family: "Inter", sans-serif;
+}
+
+.handwriting-font {
+    font-family: "Qwitcher Grypen", cursive;
+}
+
+.text-light {
+    color: var(--website-light-font);
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.main-content {
+    width: 50vw;
+}
+
+header {
+    margin-top: 6em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7em;
+}
+
+header h3 {
+    width: fit-content;
+    border: 2px solid var(--website-font);
+    font-size: 2.2em;
+    font-weight: bold;
+    transform: rotate(-13deg);
+    padding: 0 0.2em;
+    border-radius: 50%;
+}
+
+header h1 {
+    font-size: 2em;
+    padding-top: 0.1em;
+}
+
+header p {
+    font-size: 0.9em;
+    color: var(--website-light-font);
+    font-weight: bold;
+}
