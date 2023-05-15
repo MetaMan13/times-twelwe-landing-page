@@ -65,7 +65,6 @@ header p {
 }
 
 .main-content-section {
-    background: rebeccapurple;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 1em;
@@ -77,6 +76,7 @@ header p {
     border-radius: 20px;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     padding: 20px;
 }
 
@@ -118,6 +118,7 @@ header p {
     align-items: center;
     gap: 0.5em;
     margin-top: 3em;
+    font-size: 0.9em;
 }
 
 .main-content-section-item-action-download {
@@ -180,4 +181,102 @@ header p {
 
 .main-content-section-item-space {
     padding: 3em 2em;
+}
+
+.call-to-action {
+    margin-top: 6em;
+}
+
+.call-to-action h3 {
+    font-size: 0.95em;
+    color: var(--website-light-font);
+}
+
+.call-to-action form {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.call-to-action form input[type="email"] {
+    background: var(--main-content-background);
+    padding: 20px;
+    border-radius: 10px;
+    color: var(--website-light-font);
+}
+
+.call-to-action form input[type="submit"] {
+    background: var(--website-font);
+    color: var(--website-background);
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.call-to-action form input[type="submit"]:hover {
+    background: #d4d4d4;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    color: var(--website-light-font);
+    font-weight: bold;
+    padding: 6em 0em;
+}
+
+footer a:hover {
+    color: var(--website-font);
+    transition: ease-in-out;
+    transition-duration: 200ms;
+}
+
+@media screen and (min-width: 656px) {
+    .main-content {
+        width: 90vw;
+        overflow: hidden;
+    }
+
+    .main-content-section {
+        grid-template-columns: minmax(0, 1fr) 1fr;
+    }
+
+    .call-to-action form {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 756px) {
+    .main-content {
+        width: 80vw;
+    }
+}
+
+@media screen and (min-width: 856px) {
+    .main-content {
+        width: 70vw;
+    }
+}
+
+@media screen and (min-width: 1256px) {
+    .main-content {
+        width: 50vw;
+    }
+}
+
+@media screen and (min-width: 1356px) {
+    .main-content {
+        width: 40vw;
+    }
 }
