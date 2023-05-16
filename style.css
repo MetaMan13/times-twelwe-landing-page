@@ -32,7 +32,7 @@ body {
 }
 
 .main-content {
-    width: 60vw;
+    width: 90vw;
 }
 
 header {
@@ -66,6 +66,7 @@ header p {
 
 .main-content-section {
     display: grid;
+    min-width: fit-content;
     grid-template-columns: repeat(1, 1fr);
     gap: 1em;
     margin-top: 2em;
@@ -235,13 +236,12 @@ footer a:hover {
 }
 
 @media screen and (min-width: 656px) {
-    .main-content {
-        width: 90vw;
-        overflow: hidden;
-    }
-
     .main-content-section {
-        grid-template-columns: minmax(0, 1fr) 1fr;
+        grid-template-columns: minmax(min-content, 300px) minmax(
+                min-content,
+                300px
+            );
+        justify-content: center;
     }
 
     .call-to-action form {
@@ -254,29 +254,5 @@ footer a:hover {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-    }
-}
-
-@media screen and (min-width: 756px) {
-    .main-content {
-        width: 80vw;
-    }
-}
-
-@media screen and (min-width: 856px) {
-    .main-content {
-        width: 70vw;
-    }
-}
-
-@media screen and (min-width: 1256px) {
-    .main-content {
-        width: 50vw;
-    }
-}
-
-@media screen and (min-width: 1356px) {
-    .main-content {
-        width: 40vw;
     }
 }
